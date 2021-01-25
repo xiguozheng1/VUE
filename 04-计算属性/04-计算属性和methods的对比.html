@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+  <!-- 1.直接拼接，过于繁琐一般不用 -->
+  <h2>{{firstName}} {{lastName}}</h2>
+  <!-- 2.通过定义methods，每getFullName()调用一次方法 -->
+  <h2>{{getFullName()}}</h2>
+  <!-- 3.通过computed，计算属性，使用缓存 -->
+  <h2>{{fullName}}</h2>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      firstName: 'Kobe',
+      lastName: 'Bryant'
+    },
+    method: {
+      getFullName: function () {
+        return this.firstName + ' ' + this.lastName;
+      }
+    },
+    computed: {
+      fullName: function () {
+        return this.firstName + ' ' + this.lastName
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
