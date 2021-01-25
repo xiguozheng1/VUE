@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+  // 1.属性的增强写法
+  const name = 'why';
+  const age = 18;
+  const height = 1.77;
+  // es5的写法
+  const obj = {
+    name: name,
+    age: age,
+    height: height
+  }
+  // es6的写法
+  const ob = {
+    name,
+    age,
+    height
+  }
+
+  // 2.函数的增强写法
+  // es5写法
+  const person = {
+    run: function () {
+    },
+    eat: function () {
+    }
+  }
+  // es6写法
+  const p = {
+    run() {
+    },
+    eat() {
+    }
+  }
+</script>
+
+</body>
+</html>
