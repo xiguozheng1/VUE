@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+  <ul>
+    <li v-for="item in array">{{item}}</li>
+  </ul>
+  <button @click="btnClick">按钮</button>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      array: ['a', 'b', 'c', 'd']
+    },
+    methods:{
+      btnClick(){
+        // 1.push方法
+        // this.array.push('aaa')
+
+        // pop()
+        // shift()
+        // unshift()
+        // splice()重要可以添加、删除、替换
+        // sort()
+        // reverse()
+
+        //注意：通过索引值修改数组中的元素，不是响应式的
+        // this.array[0] = 'dfdddd';
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
