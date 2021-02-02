@@ -47,11 +47,29 @@ const app = new Vue({
   },
   computed: {
     totalPrice() {
-      let totalPrice = 0;
-      for (let i = 0; i < this.books.length; i++) {
-        totalPrice += this.books[i].price * this.books[i].count
-      }
-      return totalPrice
+      // // 1.普通的for循环
+      // let totalPrice = 0;
+      // for (let i = 0; i < this.books.length; i++) {
+      //   totalPrice += this.books[i].price * this.books[i].count
+      // }
+      // return totalPrice
+
+      // 2.for (let i in this.books)
+      // let totalPrice = 0;
+      // for (let i in this.books) {
+      //   totalPrice += this.books[i].price * this.books[i].count
+      // }
+
+      // 3.for (let i of this.books)
+      // let totalPrice = 0;
+      // for (let item of this.books) {
+      //     totalPrice += item.price * item.count
+      // }
+      // return totalPrice
+
+      return this.books.reduce(function (preValue, book) {
+        return preValue + book.price * book.count
+      },0)
     }
   },
   filters: {
