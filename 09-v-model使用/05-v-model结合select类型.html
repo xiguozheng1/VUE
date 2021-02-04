@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+  <!-- 1.选择单选-下拉框的一种，目前网站用的已经不多 -->
+  <select name="key" v-model="fruit">
+    <option value="苹果">苹果</option>
+    <option value="柿子">柿子</option>
+    <option value="香蕉">香蕉</option>
+    <option value="石榴">石榴</option>
+  </select>
+  <h2>{{fruit}}</h2>
+  <br>
+  <!-- 2.选择多选 -->
+  <select name="keys" v-model="array" multiple>
+    <option value="苹果">苹果</option>
+    <option value="柿子">柿子</option>
+    <option value="香蕉">香蕉</option>
+    <option value="石榴">石榴</option>
+  </select>
+  <h2>{{array}}</h2>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: '你好啊',
+      fruit: '苹果',
+      array: []
+    }
+  })
+</script>
+
+</body>
+</html>
